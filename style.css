@@ -28,12 +28,32 @@ body {
 .instagram-smartphone {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 50%;
 }
 
-.instagram-smartphone img {
+.instagram-smartphone {
     height: 50rem;
+    margin-left: 30px;
+}
+
+.screen{
+    position: absolute;
+    margin-left: 44px;
+    margin-top: 4px;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    25%{ 
+        opacity: 1;
+   }
+    50%{
+        opacity: 0;
+    }
 }
 
 .instagram-continue {
@@ -45,13 +65,26 @@ body {
     min-height: 34rem;
 }
 
+
+.screen:nth-child(2){
+    animation-delay: 5s;
+}
+
+.screen:nth-child(3){
+    animation-delay: 10s;
+}
+
+.screen:nth-child(4){
+    animation-delay: 15s;
+}
+
 .group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
-    width: 100%;
+    width: 330px;
     padding: 1.3rem 0;
     border: 1px solid lightgray;
 }
@@ -101,7 +134,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 330px;
     padding: 1.3rem 0;
 }
 
@@ -136,9 +169,9 @@ body {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 780px) {
     body {
-        background-color: #ffffff;
+        background-color: #f3f3f3;
     }
 
     .instagram-container {
@@ -154,6 +187,16 @@ body {
     }
     
     .group {
-        border: 1px solid transparent;
+        border: 1px solid #d4d4d4;
+    }
+}
+
+@media (max-width: 320px){
+    body {
+        background-color: #f3f3f3;
+    }
+
+    .group{
+        border: 1px solid #d4d4d4;
     }
 }
